@@ -1,5 +1,4 @@
-﻿using System.IO;
-using JWTIdentityClassLib.Entities;
+﻿using JWTIdentityClassLib.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,12 +29,12 @@ namespace JWTIdentityClassLib.Data
         //    return Configuration.GetConnectionString("IdentityDatabase");
         //}
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            // connect to sqlserver database
-            //options.UseSqlServer(Configuration.GetConnectionString("IdentityDatabase"));
-            options.UseSqlServer("Server=localhost,1433;Database=IdentityDB;User=sa;Password=Pass#Word1");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //{
+        //    // connect to sqlserver database
+        //    //options.UseSqlServer(Configuration.GetConnectionString("IdentityDatabase"));
+        //    options.UseSqlServer("Server=localhost,1433;Database=IdentityDB;User=sa;Password=Pass#Word1");
+        //}
 
         // DBSET....is here...
         public DbSet<RefreshToken> RefreshTokens { get; set; }
